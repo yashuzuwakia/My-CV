@@ -45,8 +45,9 @@
       }
       
       /* Caption text */
-      .text {
+      .mySlides .text {
         color: #f2f2f2;
+        background-color: rgba(0,0,0,0.5);
         font-size: 15px;
         padding: 8px 12px;
         position: absolute;
@@ -83,7 +84,7 @@
       /* Fading animation */
       .fade {
         animation-name: fade;
-        animation-duration: 1.5s;
+        animation-duration: 2.5s;
       }
       
       @keyframes fade {
@@ -118,22 +119,19 @@
 
       <div class="mySlides fade">
         <img src="./images/VideoSearch.png" style="width:100%">
-        <div class="text">vIDEO SEARCH PROJECT</div>
+        <a href="https://yashuzuwakia.github.io/VideoSearch/" target="_blank"><div class="text">VIDEO SEARCH PROJECT</div></a>
       </div>
       
       <div class="mySlides fade">
         <img src="./images/ImageSearch.png" style="width:100%">
-        <div class="text">IMAGE SEARCH PROJECT</div>
+        <a href="https://yashuzuwakia.github.io/image/" target="_blank"><div class="text">IMAGE SEARCH PROJECT</div></a>
       </div>
       
       <div class="mySlides fade">
         <img src="./images/MovieSearch.png" style="width:100%">
-        <div class="text">MOVIE SEARCH PROJECT</div>
+        <a href="https://yashuzuwakia.github.io/Movie-Search/" target="_blank"><div class="text">MOVIE SEARCH PROJECT</div></a>
       </div>
-      
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-      
+
       </div>
       <br>
       
@@ -169,6 +167,7 @@
       </div>
       <hr>
       <div class="contact-me">
+        <a class="btn" href="./images/Yashwant.pdf">MY RESUME</a>
         <h2>Get In Touch</h2>
         <h3>If You love coding as i do.</h3>
         <p class="contact-message">Let's talk about how awsome this is. We can share our ideas on this.</p>
@@ -180,35 +179,6 @@
       <a class="footer-link" href="https://www.linkedin.com/in/iam-yash?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
       <p class="copy-right">© 2021 Yashwant Choudhary @ Dassault Systemes.</p>
     </div>
-
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
-      </script>
-
+    <script src="index.js"></script>
   </body>
 </html>
